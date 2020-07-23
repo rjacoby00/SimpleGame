@@ -8,10 +8,18 @@ Entity::Entity() {
     this->texture = ' ';
 }
 
-Entity::Entity(int x, int y, char texture) {
+Entity::Entity(int x, int y, char texture, EntityColor c) {
     this->x = x;
     this->y = y;
-    this->texture = texture = ' ';
+    this->texture = texture;
+    this->color = c;
 }
 
-char Entity::getTexture() { return texture; }
+unsigned short int Entity::getX() { return this->x; }
+unsigned short int Entity::getY() { return this->y; }
+
+EntityColor Entity::getColor() { return this->color; }
+
+char Entity::getTexture() { return this->texture; }
+
+int Entity::loop() { return 0; }

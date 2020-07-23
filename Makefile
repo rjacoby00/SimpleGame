@@ -10,7 +10,7 @@ LDFLAGS = -lncurses
 _DEPS = main.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o load_config.o render.o entity.o
+_OBJ = main.o load_config.o render.o entity.o map.o player.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 

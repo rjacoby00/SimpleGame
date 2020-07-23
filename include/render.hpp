@@ -1,14 +1,10 @@
 // Ryan Jacoby
 
 class Render {
+private:
+    Map * current_map;
 public:
-    Render();
+    Render(Map *);
     ~Render();
-    char loop();
-};
-
-struct RenderColor {
-    int fg, bg;
-
-    RenderColor(int, int);
+    char draw();
 };

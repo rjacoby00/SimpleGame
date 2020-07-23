@@ -1,6 +1,9 @@
 // Ryan Jacoby
 
 class Player : public Entity {
+private:
+    int px, py;
 public:
-    int loop();
+    Player(int, int);
+    int loop(char, Map *);
 };
