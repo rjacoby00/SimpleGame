@@ -1,7 +1,10 @@
 // Ryan Jacoby
 
-std::vector<std::vector<char>> map;
-static char default_map[10][10] = {
+extern std::vector<std::vector<char>> map;
+
+static const int DEFAULT_MAP_X = 10;
+static const int DEFAULT_MAP_Y = 10;
+static char default_map[DEFAULT_MAP_X][DEFAULT_MAP_Y] = {
     {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}, 
     {'#', ' ', '#', ' ', '#', ' ', ' ', ' ', ' ', '#'}, 
     {'#', ' ', '#', ' ', '#', '#', ' ', '#', ' ', '#'}, 
@@ -13,6 +16,5 @@ static char default_map[10][10] = {
     {'#', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', '#'},
     {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}};
 
+void loadMap();
 int test();
-
-

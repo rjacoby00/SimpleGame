@@ -3,13 +3,11 @@
 #include "main.hpp"
 
 int main() {
-    for(int i = 0; i < 10; i++) {
-        for(int j = 0; j < 10; j++)
-            std::cout << default_map[i][j];
-        std::cout << '\n';
-    }
+    loadMap();
 
-    std::cout << '\n' << test() << '\n';
+    Render test;
+
+    while(test.loop() == 0);
 
     return 0;
 }

@@ -1,3 +1,6 @@
+EXAMPLE CONTENTS OF `main.sg`:
+"game_main" must be on first line to be valid entry point to config tree
+
 game_main
 title:Test Title
 creator:Ryan

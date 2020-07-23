@@ -2,7 +2,7 @@ SRCDIR = ./src
 ODIR = ./bin
 IDIR = ./include
 
-CFLAGS = -std=c++17 -I$(IDIR)
+CFLAGS = -std=c++1z -I$(IDIR)
 LDFLAGS = -lncurses
 
 #DEPS := $(wildcard $(IDIR)/)
@@ -10,7 +10,7 @@ LDFLAGS = -lncurses
 _DEPS = main.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o load_config.o
+_OBJ = main.o load_config.o render.o entity.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
