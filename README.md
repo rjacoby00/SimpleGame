@@ -1,7 +1,11 @@
 # SimpleGame
-### Ryan Jacoby
+#### Ryan Jacoby
 
 SimpleGame is a light wieght game engine for making text based, top down dungeon crawlers.  The old code can be found in `simple_game.cpp`, but use of that file is not recommended.  The code there was poorly codded and hard to be expanded upon to add any of the future features.  As far as I know, this should compile on GNU/Linux and macOS; Windows may work using WSL but I have not tested it.  NCurses(the library this uses to manage the terminal buffer) support is not good for Windows.
+
+## Compiling
+
+SimpleGame should compile on GNU/Linux and macOS.  Simply run `make` to build and `./SimpleGame` to run.  When/if the project gets bigger and compile times get longer(especially if Vulkan support is added) prebuilt binaries will be provided.
 
 ## Future features
 - ~~Read map+basic config from `main.sg`~~
