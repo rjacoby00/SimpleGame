@@ -7,4 +7,5 @@ public:
     Render(Map *);
     ~Render();
     char draw();
+    char message(std::string);
 };

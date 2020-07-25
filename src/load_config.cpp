@@ -10,12 +10,8 @@ Map * loadMap() {
     std::ifstream fin;
     fin.open("config/main.sg");
 
-    if(!fin.good()) {
-        std::cout << "Filling map with default_map\n";
-        m->loadDefaultMap();
-        
-    } else {
-        std::cout << "Map file found, not using default_map\n";
+    if(!fin.good()) m->loadDefaultMap();
+    else {
         std::string line;
         getline(fin, line);
 

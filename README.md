@@ -1,10 +1,10 @@
 # SimpleGame
 ### Ryan Jacoby
 
-SimpleGame is a light wieght game engine for making text based, top down dungeon crawlers.
+SimpleGame is a light wieght game engine for making text based, top down dungeon crawlers.  The old code can be found in `simple_game.cpp`, but use of that file is not recommended.  The code there was poorly codded and hard to be expanded upon to add any of the future features.  As far as I know, this should compile on GNU/Linux and macOS; Windows may work using WSL but I have not tested it.  NCurses(the library this uses to manage the terminal buffer) support is not good for Windows.
 
 ## Future features
-- Read map+basic config from `main.sg`
+- ---Read map+basic config from `main.sg`---
   - Read multiple config files from `Custom\custom.sg` included from `main.sg`
 - Doors + locked doors
 - Add support for multi-page maps
@@ -22,11 +22,13 @@ SimpleGame is a light wieght game engine for making text based, top down dungeon
 ## Config documentation
 ### Folder structure
 ```
-|--Custom
-|  |--custom.sg
+|--config
+|  |--custom
+|  |   |--custom.sg
+|  |
+|  |--main.sg
 |
-|--main.sg
-|--simplegame
+|--SimpleGame
 ```
 ### main.sg
 Needed Arguments:

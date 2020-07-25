@@ -47,13 +47,28 @@ char Render::draw() {
         printw("\n");
     }
 
-    printw("\nPress escape to exit...");
+    printw("\n\nYou are the "); // Will be customizable in the future.
+    attron(COLOR_PAIR(2));
+    printw("*");
+    attroff(COLOR_PAIR(2));
+    printw("\nPres ESC to leave, move with WASD\nTo win, get to ");
+    attron(COLOR_PAIR(3));
+    printw("F");
+    attroff(COLOR_PAIR(3));
+    printw(".  The game will quit when you do.");
 
     for(Entity * e : current_map->getEntities()) {
         attron(COLOR_PAIR(e->getColor()));
         mvaddch(e->getY(), (e->getX() * 3) + 1, e->getTexture());
         attroff(COLOR_PAIR(e->getColor()));
     }
+
+    return getch();
+}
+
+char Render::message(std::string message) {
+    erase();
+    printw(message.c_str());
 
     return getch();
 }

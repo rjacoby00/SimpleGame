@@ -33,6 +33,8 @@ int Player::loop(char c, Map * m) {
     if(m->map[y][x] == '#') {
         this->x = this->px;
         this->y = this->py;
+    } else if (m->map[y][x] == 'F') {
+        return 1;
     }
     return 0;
 }
